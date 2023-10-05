@@ -1,3 +1,5 @@
+
+// get the data
 fetch("data.json").then((response)=>{
     console.log(response)
     let jsonData = response.json();
@@ -7,6 +9,7 @@ fetch("data.json").then((response)=>{
     console.log(data.results[0])
     data.results.forEach(place => {
         var sceneEl = document.querySelector('a-scene');
+        //make a box and text for each
 var entityEl = document.createElement('a-entity');
 var entityName = document.createElement('a-entity');
 entityEl.setAttribute('geometry', {
@@ -28,13 +31,3 @@ entityName.setAttribute('text', {
     });
 })
 
-console.log("hi")
-// var sceneEl = document.querySelector('a-scene');
-// var entityEl = document.createElement('a-entity');
-// entityEl.setAttribute('geometry', {
-//     primitive: 'box',
-//     height: 3,
-//     width: 1,
-//   });
-//   entityEl.setAttribute('position', {x: 1, y: 2, z: -3});
-// sceneEl.appendChild(entityEl)
